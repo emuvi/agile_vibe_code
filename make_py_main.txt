@@ -25,7 +25,7 @@ Target structure (model):
 2) `if __name__ == '__main__':` block:
    - Call `main()`.
    - Store its return value in `exit_code`.
-   - If the script is interactive/desktop-oriented, optionally pause with `input("\nPress Enter to exit...")`.
+   - Always pause with `input("\nPress Enter to exit...")` before terminating.
    - Terminate using `sys.exit(exit_code)`.
 
 Editing instructions:
