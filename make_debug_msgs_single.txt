@@ -1,6 +1,6 @@
 ## Code Structure & Documentation
 - Break the script into small, single-responsibility semantic functions
-- Add clear, comprehensive docstrings to every function explaining purpose, parameters, and return values
+- Add clear, comprehensive docstring to every function explaining purpose, parameters, and return values
 
 ## Timestamp Format
 - All messages must include timestamp in format `[HH:MM:SS]` using `get_current_time()` function
