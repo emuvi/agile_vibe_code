@@ -1,0 +1,30 @@
+## Code Structure & Documentation
+- Break the script into small, single-responsibility semantic functions
+- Add clear, comprehensive docstrings to every function explaining purpose, parameters, and return values
+
+## Timestamp Format
+- All messages must include timestamp in format `[HH:MM:SS]` using `get_current_time()` function
+- Pattern: `[HH:MM:SS] [EMOJI] [CATEGORY] [FUNCTION_NAME] message`
+
+## Message Categories & Emoji Indicators
+Use these exact patterns for consistency:
+- **ℹ️ [LOG]**: General informational messages
+- **🔹 [STEP]**: Function start, step execution, or process beginning
+- **✅ [SUCCESS]**: Step completion or successful operation
+- **🔴 [ERROR]**: Error occurrence or failure
+
+## Function Logging & Error Handling
+- **Start**: `[HH:MM:SS] 🔹 [STEP] [function_name] Starting` + log parameters being used
+- **Each step**: `[HH:MM:SS] 🔹 [STEP] [step_name] Starting/status` with relevant parameters
+- **Success**: `[HH:MM:SS] ✅ [SUCCESS] [step_name] Completed/result details`
+- **Error handling**: 
+  - Catch all exceptions with: `[HH:MM:SS] 🔴 [ERROR] [step_name] error_message`
+  - Provide actionable error details (what went wrong, why, how to fix)
+- **End**: Log final state, results, and completion status
+
+## Loop/Cycle Logging & Monitoring
+- **Start of cycle**: `[HH:MM:SS] 🔹 [STEP] [cycle_name] Processing item X of Y`
+- **During cycle**: 
+  - Progress: `[HH:MM:SS] ℹ️ [LOG] Processing: file_name with specific_parameters`
+  - Errors: `[HH:MM:SS] 🔴 [ERROR] [operation] error_details`
+  - Success: `[HH:MM:SS] ✅ [SUCCESS] [operation] result`
